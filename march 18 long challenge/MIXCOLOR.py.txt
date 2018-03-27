@@ -1,0 +1,10 @@
+from collections import Counter
+for t in range(int(input())):
+	num = int(input())
+	count = 0
+	ls = [int(x) for x in input().split()]
+	dic = Counter(ls)
+	for j in dic:
+		if dic[j] > 1:
+			count += dic[j] - 1
+	print(str(count))
